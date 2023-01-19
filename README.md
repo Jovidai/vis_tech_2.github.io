@@ -1,2 +1,2 @@
 # vis_tech_2.github.io
-Hi, this is the assignment for my Vis Tech 2 course.
+Hi, here are some assignments for my Vis Tech 2 course.
