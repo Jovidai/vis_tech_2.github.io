@@ -1,0 +1,75 @@
+body {
+    font-family: "rockwell";
+    margin: 0;
+    text-align: center;
+
+}
+
+#banner h1 {
+  font-size: 30px;
+  font-family: "rockwell";
+}
+
+#banner h2 {
+  font-family: "rockwell";
+}
+  
+
+  @media (max-width: 600px) {
+    .section {
+      flex-direction: column;
+    }
+    .section svg {
+      flex: none;
+    }
+  }
+
+  #back {
+    text-align: center;
+  }
+
+  #paragraph {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 35px;
+  }
+
+
+
+  #tooltip2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    font-family: 'rockwell', sans-serif;
+    font-size: 10pt;
+    background-color:white;
+    padding: 3px;
+    opacity: 0;
+    pointer-events: none;
+    border: 3px solid #8E44AD;
+  }
+
+
+  a:link {
+    color:#cd395b;
+    text-decoration: none;
+}
+
+  a:visited {
+    color:#cd395b;
+}
+
+  a:hover {
+    color:#1c1c1c;
+    background-color: #ebf952;
+}
+
+span.color1 {
+  color: #A569BD;
+}
+
+span.color2 {
+  color: #8E44AD;
+}

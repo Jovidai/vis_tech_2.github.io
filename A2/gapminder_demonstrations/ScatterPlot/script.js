@@ -225,3 +225,86 @@ d3.csv("./data/gapminder.csv").then(function(data) {
         .text("Life Expectancy (Years)");
 
 });
+
+const legendWidth = document.querySelector("#legend").clientWidth;
+const legendHeight = 150;
+const legendMargin = 20;
+const legendSpacing = 100;
+
+//??? const colorLegend = 
+// some codes should be followed
+
+// Need to add some codes before it
+points.on("moueseover", function(e,d) {
+    
+    let x = +d3.select(this).attr("cx");
+    let y = +d3.select(this).attr("cy");
+
+
+// Format the display of the numbers,
+// using d3.format()
+// See: https://github.com/d3/d3-format/blob/v3.1.0/README.md#format
+
+    let displayValue = d3.format(",") (d.pop);
+
+    // Make the tooltip visible when mmouse "enters" a point
+    tooltip.style("visibility", "visible")
+    .style("top", '${y}px')
+    .style("left", '${x}px')
+    .html('<p><b>${d.country}</b><br><em>${d.continent}</em><br>#: ${displayValue}</p>');
+
+    // Optionally, visually highlight the scaled circles
+    points.attr("opacity, 0.1");
+    d3.select(this).attr("opacity", 1).raise();
+
+}).on("mouseout", function(){
+
+    // Make the tooltip invisible when mouse "leaves" a point
+    tooltip.style("visibility", "hidden");
+
+    // Rest the circles' appearance back to original
+    points.attr("opacity", 1);
+
+});
+
+/* Adding the legend
+
+*/
+
+
+
+const continents = ["Asia", "Europe", "Africa", "Americas", "Oceania"]
+
+
+
+
+continents.forEach(function(continents, i) {
+    
+    colorLegend.append("circle")
+    .attr("cx", 30+lengendMargin + i * legendSpacing)
+    .attr("cy", lengendMargin)
+    .attr("r", 10)
+    .attr("fill", fillScale(continent));
+
+    colorLegend.append("text")
+    .attr("class", "legend--label")
+    .attr("x", 30+lengendMargin + i * legendSpacing)
+    .attr("y", lengendMargin * 25)
+    .text(continent)
+});
+
+
+const allCategories = data.map(function(d) {
+
+    return d.continent;
+
+});
+
+console.log(allCategories);
+
+const uniqueCategories = [...new Set(allCategories)];
+
+console.log(uniqueCategories);
+
+
+
