@@ -64,7 +64,7 @@ barChartSvg.selectAll("rect")
 
 function mousemove(event, d) {
 d3.select(this)
-.attr("fill","#6C3483")
+.attr("fill","#E74C3C")
 .attr("stroke-width", "1px")
 .attr("fill-opacity", "1");
 tooltip.style("display", "block")
@@ -82,7 +82,7 @@ tooltip.style("display", "block")
 
 function mouseover() {
   d3.select(this)
-    .attr("fill","#6C3483")
+    .attr("fill","#E74C3C")
     .attr("stroke-width", "1px")
     .attr("fill-opacity", "1");
   tooltip.style("opacity", 1)

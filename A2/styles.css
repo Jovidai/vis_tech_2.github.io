@@ -15,14 +15,7 @@ body {
 }
   
 
-  @media (max-width: 600px) {
-    .section {
-      flex-direction: column;
-    }
-    .section svg {
-      flex: none;
-    }
-  }
+
 
   #back {
     text-align: center;
@@ -73,3 +66,84 @@ span.color1 {
 span.color2 {
   color: #8E44AD;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+  #barchart svg {
+    max-width: 8px;
+  }
+
+  body {
+    background-color: #F4D03F;
+  }
+
+  h1 {
+    font-size: 6pt;
+  }
+
+  h2 {
+    font-size: 15pt;
+    text-shadow: 2px 2px #1ABC9C;
+  }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) { 
+  #barchart svg {
+    max-width: 16px;
+  }
+
+  body {
+    background-color: #F4D03F;
+  }
+
+  h1 {
+    font-size: 6pt;
+  }
+
+  h2 {
+    font-size: 15pt;
+    text-shadow: 2px 2px #1ABC9C;
+  }
+ }
+
+ /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+  #barchart svg {
+    max-width: 16px;
+  }
+
+  body {
+    background-color: #F5CBA7;
+  }
+
+  h1 {
+    font-size: 6pt;
+  }
+
+  h2 {
+    font-size: 15pt;
+    text-shadow: 2px 2px #3498DB;
+  }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
+  #barchart svg {
+    max-width: 16px;
+  }
+
+  body {
+    background-color: #CCCCFF;
+  }
+
+  h1 {
+    font-size: 25pt;
+  }
+
+  h2 {
+    font-size: 15pt;
+    text-shadow: 2px 2px #FFBF00;
+  }
+ }
